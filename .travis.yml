@@ -1,0 +1,7 @@
+language: java
+env:
+  global:
+    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    - DB=mongodb
+sudo: false
+script: cd LED-Server && mvn clean compile assembly:single
