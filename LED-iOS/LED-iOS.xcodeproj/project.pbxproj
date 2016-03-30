@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F5028B721CAAA03A00D1A4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028B711CAAA03A00D1A4BD /* AppDelegate.swift */; };
-		F5028B741CAAA03A00D1A4BD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028B731CAAA03A00D1A4BD /* FirstViewController.swift */; };
-		F5028B761CAAA03A00D1A4BD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028B751CAAA03A00D1A4BD /* SecondViewController.swift */; };
-		F5028B791CAAA03A00D1A4BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5028B771CAAA03A00D1A4BD /* Main.storyboard */; };
 		F5028B7B1CAAA03A00D1A4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */; };
 		F5028B7E1CAAA03A00D1A4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5028B7C1CAAA03A00D1A4BD /* LaunchScreen.storyboard */; };
+		F58575CD1CAAF0CD0023AF75 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = F58575CC1CAAF0CD0023AF75 /* Colors.plist */; };
+		F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */; };
+		F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D11CAAF5380023AF75 /* ViewController.swift */; };
+		F58575D51CAAF5380023AF75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58575D21CAAF5380023AF75 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5028B6E1CAAA03A00D1A4BD /* LED-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LED-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5028B711CAAA03A00D1A4BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5028B731CAAA03A00D1A4BD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F5028B751CAAA03A00D1A4BD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		F5028B781CAAA03A00D1A4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5028B7D1CAAA03A00D1A4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5028B7F1CAAA03A00D1A4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58575CC1CAAF0CD0023AF75 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
+		F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		F58575D11CAAF5380023AF75 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F58575D21CAAF5380023AF75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		F5028B701CAAA03A00D1A4BD /* LED-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F5028B891CAAB13C00D1A4BD /* classes */,
 				F5028B711CAAA03A00D1A4BD /* AppDelegate.swift */,
-				F5028B731CAAA03A00D1A4BD /* FirstViewController.swift */,
-				F5028B751CAAA03A00D1A4BD /* SecondViewController.swift */,
-				F5028B771CAAA03A00D1A4BD /* Main.storyboard */,
 				F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */,
 				F5028B7C1CAAA03A00D1A4BD /* LaunchScreen.storyboard */,
 				F5028B7F1CAAA03A00D1A4BD /* Info.plist */,
 			);
 			path = "LED-iOS";
+			sourceTree = "<group>";
+		};
+		F5028B891CAAB13C00D1A4BD /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				F58575CC1CAAF0CD0023AF75 /* Colors.plist */,
+				F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */,
+				F58575D11CAAF5380023AF75 /* ViewController.swift */,
+				F58575D21CAAF5380023AF75 /* Main.storyboard */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58575CD1CAAF0CD0023AF75 /* Colors.plist in Resources */,
 				F5028B7E1CAAA03A00D1A4BD /* LaunchScreen.storyboard in Resources */,
 				F5028B7B1CAAA03A00D1A4BD /* Assets.xcassets in Resources */,
-				F5028B791CAAA03A00D1A4BD /* Main.storyboard in Resources */,
+				F58575D51CAAF5380023AF75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +151,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5028B761CAAA03A00D1A4BD /* SecondViewController.swift in Sources */,
+				F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */,
+				F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */,
 				F5028B721CAAA03A00D1A4BD /* AppDelegate.swift in Sources */,
-				F5028B741CAAA03A00D1A4BD /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5028B771CAAA03A00D1A4BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5028B781CAAA03A00D1A4BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5028B7C1CAAA03A00D1A4BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +299,7 @@
 				F5028B841CAAA03A00D1A4BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
