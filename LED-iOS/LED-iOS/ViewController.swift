@@ -75,6 +75,17 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         
         // set preview background to selected color
         self.colorPreview.backgroundColor = selectedUIColor
+        
+        // Call the server to change the color of the light
+        do {
+            try HttpRequest.doChangeColor(color: selectedUIColor)
+        } catch LedError.NO_SERVER_IP_ADDRESS {
+            showErrorMessage("There's no IP for the server known. Please change this in settings.")
+        } catch LedError.INCORRECT_COLOR_FORMAT {
+            showErrorMessage("The color you provided, is in an invalid format.")
+        } catch {
+            showErrorMessage("Something went wrong.")
+        }
     }
     
     
@@ -117,6 +128,16 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         
         //show color popover
         presentViewController(colorPickerVc, animated: true, completion: nil)
+    }
+    
+    private func showErrorMessage(message: String) {
+        let controller = UIAlertController(title: "Oops..", message: message, preferredStyle: .ActionSheet)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        
+        controller.addAction(action)
+        
+        presentViewController(controller, animated: true, completion: nil)
+        
     }
     
     

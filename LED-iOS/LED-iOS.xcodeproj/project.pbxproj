@@ -10,10 +10,12 @@
 		F5028B721CAAA03A00D1A4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5028B711CAAA03A00D1A4BD /* AppDelegate.swift */; };
 		F5028B7B1CAAA03A00D1A4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */; };
 		F5028B7E1CAAA03A00D1A4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5028B7C1CAAA03A00D1A4BD /* LaunchScreen.storyboard */; };
+		F53890FF1CB4E821005065B2 /* LedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53890FE1CB4E821005065B2 /* LedError.swift */; };
 		F58575CD1CAAF0CD0023AF75 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = F58575CC1CAAF0CD0023AF75 /* Colors.plist */; };
 		F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */; };
 		F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D11CAAF5380023AF75 /* ViewController.swift */; };
 		F58575D51CAAF5380023AF75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58575D21CAAF5380023AF75 /* Main.storyboard */; };
+		F5C50ECE1CB40FCD0062536C /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +24,12 @@
 		F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5028B7D1CAAA03A00D1A4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5028B7F1CAAA03A00D1A4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F53890FE1CB4E821005065B2 /* LedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedError.swift; sourceTree = "<group>"; };
 		F58575CC1CAAF0CD0023AF75 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F58575D11CAAF5380023AF75 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F58575D21CAAF5380023AF75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */,
 				F58575D11CAAF5380023AF75 /* ViewController.swift */,
 				F58575D21CAAF5380023AF75 /* Main.storyboard */,
+				F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */,
+				F53890FE1CB4E821005065B2 /* LedError.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */,
+				F53890FF1CB4E821005065B2 /* LedError.swift in Sources */,
+				F5C50ECE1CB40FCD0062536C /* HttpRequest.swift in Sources */,
 				F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */,
 				F5028B721CAAA03A00D1A4BD /* AppDelegate.swift in Sources */,
 			);
