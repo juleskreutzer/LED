@@ -15,6 +15,7 @@
 		F5EBA70C1CBAA21600908E36 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EBA70A1CBAA21600908E36 /* MainMenu.xib */; };
 		F5F5B30D1CBB74DC00220538 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5B30C1CBB74DC00220538 /* HttpRequest.swift */; };
 		F5F5B30F1CBB75DA00220538 /* LedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5B30E1CBB75DA00220538 /* LedError.swift */; };
+		F5F5B3111CBBED2E00220538 /* NSColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5B3101CBBED2E00220538 /* NSColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F5EBA70D1CBAA21600908E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5F5B30C1CBB74DC00220538 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		F5F5B30E1CBB75DA00220538 /* LedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedError.swift; sourceTree = "<group>"; };
+		F5F5B3101CBBED2E00220538 /* NSColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				F533841E1CBAC35B00EB7BF4 /* Main.storyboard */,
 				F5F5B30C1CBB74DC00220538 /* HttpRequest.swift */,
 				F5F5B30E1CBB75DA00220538 /* LedError.swift */,
+				F5F5B3101CBBED2E00220538 /* NSColorExtension.swift */,
 			);
 			path = LED;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				F533841D1CBAC25B00EB7BF4 /* ViewController.swift in Sources */,
 				F5F5B30F1CBB75DA00220538 /* LedError.swift in Sources */,
+				F5F5B3111CBBED2E00220538 /* NSColorExtension.swift in Sources */,
 				F5F5B30D1CBB74DC00220538 /* HttpRequest.swift in Sources */,
 				F5EBA7071CBAA21600908E36 /* AppDelegate.swift in Sources */,
 				F533841B1CBAC11200EB7BF4 /* EventMonitor.swift in Sources */,

@@ -11,6 +11,7 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var colorWell: NSColorWell!
+    @IBOutlet weak var brightnessSlider: NSSlider!
     @IBOutlet weak var txtServerAddress: NSTextField!
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -38,6 +39,10 @@ class ViewController: NSViewController {
         
     }
     
+    @IBAction func dimLights(sender: AnyObject) {
+        HttpRequest.doTurnOffLights()
+    }
+    
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
         if(keyPath == "color") {
@@ -47,7 +52,7 @@ class ViewController: NSViewController {
             let color = colorWell.color
             
             do {
-                try HttpRequest.doChangeColor(color: color)
+                try HttpRequest.doChangeColor(color)
             } catch(LedError.NO_SERVER_IP_ADDRESS)
             {
                 let alert = NSAlert()
@@ -80,4 +85,11 @@ class ViewController: NSViewController {
         }
         
     }
+    
+    @IBAction func sliderDidChange(sender: NSSlider) {
+        let value = sender.floatValue
+        
+        print(value)
+    }
+    
 }
