@@ -28,14 +28,14 @@ public class HttpRequest {
         
         let c = color.coreImageColor
         
-        let red = c!.red * 100
-        let green = c!.green * 100
-        let blue = c!.blue * 100
+        let red = Int(round(c!.red * 100))
+        let green = Int(round(c!.green * 100))
+        let blue = Int(round(c!.blue * 100))
         
         
         let url = "\(ip)/update/\(red)/\(green)/\(blue)"
-        
         print(url)
+        
         let request = NSMutableURLRequest(URL: NSURL(string:url)!)
         request.HTTPMethod = "GET"
         
@@ -69,15 +69,15 @@ public class HttpRequest {
         
     }
     
-    public static func brightnessDidChange(color : NSColor, changeToBrightness brightness : Float) -> Void {
+    public static func brightnessDidChange(color : NSColor, changeToBrightness brightness : Int) -> Void {
         
         let ip = getServerAddress()
         
         let c = color.coreImageColor
         
-        let red = c!.red
-        let green = c!.green
-        let blue = c!.blue
+        let red = Int(round(c!.red * 100))
+        let green = Int(round(c!.green * 100))
+        let blue = Int(round(c!.blue * 100))
         let bn = brightness
         
         let url = "\(ip)/update/brightness/\(red)/\(green)/\(blue)/\(bn)"

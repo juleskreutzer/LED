@@ -51,45 +51,17 @@ class ViewController: NSViewController {
             
             let color = colorWell.color
             
-            do {
-                try HttpRequest.doChangeColor(color)
-            } catch(LedError.NO_SERVER_IP_ADDRESS)
-            {
-                let alert = NSAlert()
-                alert.messageText = "Oops"
-                alert.addButtonWithTitle("OK")
-                alert.informativeText = "Please specify an address to the server."
-                
-                alert.beginSheetModalForWindow(NSWindow(), completionHandler: nil)
-            } catch(LedError.INCORRECT_COLOR_FORMAT)
-            {
-                let alert = NSAlert()
-                alert.messageText = "Oops"
-                alert.addButtonWithTitle("OK")
-                alert.informativeText = "The provided color was in an incorrect format."
-                
-                alert.beginSheetModalForWindow(NSWindow(), completionHandler: nil)
-
-                
-            } catch {
-                
-                let alert = NSAlert()
-                alert.messageText = "Oops"
-                alert.addButtonWithTitle("OK")
-                alert.informativeText = "Something went wrong. Please try again."
-                
-                alert.beginSheetModalForWindow(NSWindow(), completionHandler: nil)
-
-                
-            }
+            HttpRequest.doChangeColor(color)
         }
         
     }
     
     @IBAction func sliderDidChange(sender: NSSlider) {
-        let value = sender.floatValue
+        let brightness = Int(sender.floatValue)
         
-        print(value)
+        let color = colorWell.color
+        
+        HttpRequest.brightnessDidChange(color, changeToBrightness: brightness)
     }
     
 }
