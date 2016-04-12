@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="p46-Ix-mbU">
+            <objects>
+                <viewController identifier="mainView" storyboardIdentifier="mainView" id="6h3-av-fww" customClass="ViewController" customModule="LED" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="siw-26-Hjh">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="272"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-sq-0f9">
+                                <rect key="frame" x="158" y="49" width="272" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="phv-3t-dRy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-xo-GeF">
+                                <rect key="frame" x="18" y="52" width="134" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Server address" id="qdJ-NQ-mKu">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="anB-ox-qg1">
+                                <rect key="frame" x="277" y="13" width="159" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save Server Addres" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="ZL0-tZ-QAO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveServerAddress:" target="6h3-av-fww" id="Npd-1M-Sd5"/>
+                                </connections>
+                            </button>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="wHr-R3-DWU">
+                                <rect key="frame" x="20" y="134" width="410" height="118"/>
+                                <color key="color" red="0.28235294119999998" green="0.63529411759999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </colorWell>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4X-ge-lrk">
+                                <rect key="frame" x="14" y="13" width="101" height="32"/>
+                                <buttonCell key="cell" type="push" title="Dim lights" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iMu-kq-Vig">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dimLights:" target="6h3-av-fww" id="0GJ-m8-JNK"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wvg-3O-7Ir">
+                                <rect key="frame" x="154" y="100" width="280" height="27"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" numberOfTickMarks="5" sliderType="linear" id="Qz7-Da-bLb"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" target="6h3-av-fww" id="5ld-zm-CgK"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-fG-5sl">
+                                <rect key="frame" x="18" y="106" width="93" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="PKh-T1-x6H"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness" id="qOm-VD-02h">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wHr-R3-DWU" firstAttribute="leading" secondItem="Dmh-fG-5sl" secondAttribute="leading" id="0l1-3V-hqU"/>
+                            <constraint firstItem="hnl-sq-0f9" firstAttribute="top" secondItem="wvg-3O-7Ir" secondAttribute="bottom" constant="31" id="BU9-S6-WlF"/>
+                            <constraint firstItem="wHr-R3-DWU" firstAttribute="trailing" secondItem="hnl-sq-0f9" secondAttribute="trailing" id="BdJ-Q6-mb9"/>
+                            <constraint firstItem="Dmh-fG-5sl" firstAttribute="trailing" secondItem="J4X-ge-lrk" secondAttribute="trailing" id="Btc-yx-RX1"/>
+                            <constraint firstAttribute="bottom" secondItem="J4X-ge-lrk" secondAttribute="bottom" constant="20" symbolic="YES" id="C0A-H5-sTu"/>
+                            <constraint firstItem="wvg-3O-7Ir" firstAttribute="centerX" secondItem="hnl-sq-0f9" secondAttribute="centerX" id="H4b-vd-bmO"/>
+                            <constraint firstItem="wHr-R3-DWU" firstAttribute="top" secondItem="siw-26-Hjh" secondAttribute="top" constant="20" symbolic="YES" id="HcI-8l-Sa5"/>
+                            <constraint firstItem="anB-ox-qg1" firstAttribute="top" secondItem="hnl-sq-0f9" secondAttribute="bottom" constant="8" symbolic="YES" id="OJq-NA-FOG"/>
+                            <constraint firstItem="hnl-sq-0f9" firstAttribute="leading" secondItem="Pmc-xo-GeF" secondAttribute="trailing" constant="8" symbolic="YES" id="UMa-j8-XAN"/>
+                            <constraint firstItem="wvg-3O-7Ir" firstAttribute="leading" secondItem="Dmh-fG-5sl" secondAttribute="trailing" constant="47" id="Vlv-P7-yKY"/>
+                            <constraint firstItem="Dmh-fG-5sl" firstAttribute="top" secondItem="wHr-R3-DWU" secondAttribute="bottom" constant="11" id="cFt-hF-Qha"/>
+                            <constraint firstItem="wvg-3O-7Ir" firstAttribute="top" secondItem="wHr-R3-DWU" secondAttribute="bottom" constant="7" id="dd9-3W-iIn"/>
+                            <constraint firstItem="J4X-ge-lrk" firstAttribute="baseline" secondItem="anB-ox-qg1" secondAttribute="baseline" id="ezC-vk-HXP"/>
+                            <constraint firstItem="hnl-sq-0f9" firstAttribute="trailing" secondItem="anB-ox-qg1" secondAttribute="trailing" id="fN8-Hw-1cr"/>
+                            <constraint firstItem="Dmh-fG-5sl" firstAttribute="centerY" secondItem="wvg-3O-7Ir" secondAttribute="centerY" id="loG-vG-Orb"/>
+                            <constraint firstAttribute="trailing" secondItem="wHr-R3-DWU" secondAttribute="trailing" constant="20" symbolic="YES" id="qES-hM-4FB"/>
+                            <constraint firstItem="Pmc-xo-GeF" firstAttribute="baseline" secondItem="hnl-sq-0f9" secondAttribute="baseline" id="qVR-xN-p22"/>
+                            <constraint firstItem="Dmh-fG-5sl" firstAttribute="leading" secondItem="Pmc-xo-GeF" secondAttribute="leading" id="ttB-CA-Nsr"/>
+                            <constraint firstItem="Pmc-xo-GeF" firstAttribute="leading" secondItem="J4X-ge-lrk" secondAttribute="leading" id="vxv-a5-KPS"/>
+                            <constraint firstItem="wHr-R3-DWU" firstAttribute="leading" secondItem="siw-26-Hjh" secondAttribute="leading" constant="20" symbolic="YES" id="wWH-c4-JyW"/>
+                            <constraint firstAttribute="trailing" secondItem="wvg-3O-7Ir" secondAttribute="trailing" constant="18" id="xNP-F7-E3l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="wvg-3O-7Ir" id="H2w-LN-Wx9"/>
+                        <outlet property="colorWell" destination="wHr-R3-DWU" id="hgA-gJ-eha"/>
+                        <outlet property="txtServerAddress" destination="hnl-sq-0f9" id="d52-52-peM"/>
+                    </connections>
+                </viewController>
+                <customObject id="RFl-CK-xvz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="254"/>
+        </scene>
+    </scenes>
+</document>
