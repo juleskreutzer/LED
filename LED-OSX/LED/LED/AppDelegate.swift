@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -21,6 +22,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let menuItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        let launcherAppIndentifier = "nl.nujules.LedLauncherApplication"
+        
+        SMLoginItemSetEnabled(launcherAppIndentifier, true)
+        
+        var startedAtLogin = false
+        
+        for app in NSWorkspace.sharedWorkspace().runningApplications {
+            if app.bundleIdentifier == launcherAppIndentifier {
+                startedAtLogin = true
+            }
+        }
+        
+        if startedAtLogin {
+            NSDistributedNotificationCenter.defaultCenter().postNotificationName("killme", object: NSBundle.mainBundle().bundleIdentifier!)
+        }
+        
         if let button = menuItem.button {
             button.image = NSImage(named: "menuIcon")
             button.action = Selector("togglePopover:")
