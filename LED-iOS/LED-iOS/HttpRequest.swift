@@ -11,33 +11,85 @@ import UIKit
 
 public class HttpRequest {
     
-    public static func doChangeColor(color newColorToChangeTo: UIColor) throws -> Void {
-        
-        // How about a broadcast
-        
-        
+    private static func getServerAddress() -> String {
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        let ip = defaults.stringForKey("serverIp")
+        let ip = defaults.stringForKey("serverAddress")
         
-        if (ip == nil || ip == "") {
-            throw LedError.NO_SERVER_IP_ADDRESS
+        if ip == nil || ip == "" {
+            return ""
         }
         
-        let request = NSMutableURLRequest(URL: NSURL(string: "\(ip)/hello")!)
+        return ip!
+    }
+    
+    public static func doChangeColor(color : UIColor) -> Void {
+        let ip = getServerAddress()
+        
+        let c = color.coreImageColor
+        
+        let red = Int(round(c!.red * 100))
+        let green = Int(round(c!.green * 100))
+        let blue = Int(round(c!.blue * 100))
+        
+        
+        let url = "\(ip)/update/\(red)/\(green)/\(blue)"
+        print(url)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string:url)!)
+        request.HTTPMethod = "GET"
+        
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request, completionHandler:  { (data, response, error) -> Void in
+            
+            if(error != nil) {
+                print(error)
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    public static func doTurnOffLights() -> Void {
+        let ip = getServerAddress()
+        
+        let url = "\(ip)/off"
+        let request = NSMutableURLRequest(URL: NSURL(string:url)!)
         request.HTTPMethod = "GET"
         
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
+            
+            if(error != nil) {
                 print(error)
-            } else {
-                let httpResponse = response as? NSHTTPURLResponse
-                print(httpResponse)
             }
         })
         
         dataTask.resume()
         
     }
-}
+    
+    public static func brightnessDidChange(color : UIColor, changeToBrightness brightness : Int) -> Void {
+        
+        let ip = getServerAddress()
+        
+        let c = color.coreImageColor
+        
+        let red = Int(round(c!.red * 100))
+        let green = Int(round(c!.green * 100))
+        let blue = Int(round(c!.blue * 100))
+        let bn = brightness
+        
+        let url = "\(ip)/update/brightness/\(red)/\(green)/\(blue)/\(bn)"
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            if(error != nil) {
+                print(error)
+            }
+        })
+        
+        dataTask.resume()
+        
+    }}

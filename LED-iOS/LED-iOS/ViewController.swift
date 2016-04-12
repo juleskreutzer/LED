@@ -11,6 +11,9 @@ import UIKit
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, ColorPickerDelegate {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var serverAddress : String = ""
+    
     // outlet - selected color preview
     @IBOutlet var colorPreview: UIView!
     
@@ -20,7 +23,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     
     // action - called when change color button clicked
     @IBAction func changeColorButtonClicked(sender: UIButton) {
-        self.showColorPicker()
+        if serverAddress != "" {
+            self.showColorPicker()
+        }
+        else {
+            showErrorMessage("No server address known!")
+        }
+        
     }
     
     // class varible maintain selected color value
@@ -36,6 +45,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     // called after view loaded
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        serverAddress = defaults.objectForKey("serverAddress") != nil ? defaults.stringForKey("serverAddress")! : ""
         
     }
 
@@ -77,15 +88,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         self.colorPreview.backgroundColor = selectedUIColor
         
         // Call the server to change the color of the light
-        do {
-            try HttpRequest.doChangeColor(color: selectedUIColor)
-        } catch LedError.NO_SERVER_IP_ADDRESS {
-            showErrorMessage("There's no IP for the server known. Please change this in settings.")
-        } catch LedError.INCORRECT_COLOR_FORMAT {
-            showErrorMessage("The color you provided, is in an invalid format.")
-        } catch {
-            showErrorMessage("Something went wrong.")
-        }
+        HttpRequest.doChangeColor(selectedUIColor)
     }
     
     
@@ -131,7 +134,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     }
     
     private func showErrorMessage(message: String) {
-        let controller = UIAlertController(title: "Oops..", message: message, preferredStyle: .ActionSheet)
+        let controller = UIAlertController(title: "Oops..", message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         
         controller.addAction(action)
@@ -140,8 +143,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         
     }
     
-    
+    @IBAction func doChangeBrightness(sender: UISlider) {
+        let brightness = Int(round(sender.value))
         
-
+        HttpRequest.brightnessDidChange(colorPreview.backgroundColor!, changeToBrightness: brightness)
+    }
 }
 
