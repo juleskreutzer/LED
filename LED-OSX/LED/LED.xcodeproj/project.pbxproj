@@ -10,6 +10,11 @@
 		F533841B1CBAC11200EB7BF4 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533841A1CBAC11200EB7BF4 /* EventMonitor.swift */; };
 		F533841D1CBAC25B00EB7BF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533841C1CBAC25B00EB7BF4 /* ViewController.swift */; };
 		F533841F1CBAC35B00EB7BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F533841E1CBAC35B00EB7BF4 /* Main.storyboard */; };
+		F545A7401CBD318500305473 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F545A73F1CBD318500305473 /* CoreServices.framework */; };
+		F545A7481CBD32FE00305473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F545A7471CBD32FE00305473 /* AppDelegate.swift */; };
+		F545A74A1CBD32FE00305473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F545A7491CBD32FE00305473 /* Assets.xcassets */; };
+		F545A74D1CBD32FE00305473 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F545A74B1CBD32FE00305473 /* MainMenu.xib */; };
+		F545A7551CBD33EE00305473 /* LedLauncherApplication.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = F545A7451CBD32FE00305473 /* LedLauncherApplication.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F5EBA7071CBAA21600908E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBA7061CBAA21600908E36 /* AppDelegate.swift */; };
 		F5EBA7091CBAA21600908E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EBA7081CBAA21600908E36 /* Assets.xcassets */; };
 		F5EBA70C1CBAA21600908E36 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EBA70A1CBAA21600908E36 /* MainMenu.xib */; };
@@ -18,10 +23,31 @@
 		F5F5B3111CBBED2E00220538 /* NSColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F5B3101CBBED2E00220538 /* NSColorExtension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F545A7541CBD33C600305473 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				F545A7551CBD33EE00305473 /* LedLauncherApplication.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F533841A1CBAC11200EB7BF4 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		F533841C1CBAC25B00EB7BF4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F533841E1CBAC35B00EB7BF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F545A73F1CBD318500305473 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		F545A7451CBD32FE00305473 /* LedLauncherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLauncherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F545A7471CBD32FE00305473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F545A7491CBD32FE00305473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F545A74C1CBD32FE00305473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F545A74E1CBD32FE00305473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F545A7521CBD330700305473 /* LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LED.entitlements; sourceTree = "<group>"; };
+		F545A7531CBD332A00305473 /* LedLauncherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LedLauncherApplication.entitlements; sourceTree = "<group>"; };
 		F5EBA7031CBAA21600908E36 /* LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EBA7061CBAA21600908E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5EBA7081CBAA21600908E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,20 +59,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F5EBA7001CBAA21600908E36 /* Frameworks */ = {
+		F545A7421CBD32FE00305473 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5EBA7001CBAA21600908E36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F545A7401CBD318500305473 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F545A7461CBD32FE00305473 /* LedLauncherApplication */ = {
+			isa = PBXGroup;
+			children = (
+				F545A7531CBD332A00305473 /* LedLauncherApplication.entitlements */,
+				F545A7471CBD32FE00305473 /* AppDelegate.swift */,
+				F545A7491CBD32FE00305473 /* Assets.xcassets */,
+				F545A74B1CBD32FE00305473 /* MainMenu.xib */,
+				F545A74E1CBD32FE00305473 /* Info.plist */,
+			);
+			path = LedLauncherApplication;
+			sourceTree = "<group>";
+		};
 		F5EBA6FA1CBAA21600908E36 = {
 			isa = PBXGroup;
 			children = (
+				F545A73F1CBD318500305473 /* CoreServices.framework */,
 				F5EBA7051CBAA21600908E36 /* LED */,
+				F545A7461CBD32FE00305473 /* LedLauncherApplication */,
 				F5EBA7041CBAA21600908E36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F5EBA7031CBAA21600908E36 /* LED.app */,
+				F545A7451CBD32FE00305473 /* LedLauncherApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +111,7 @@
 		F5EBA7051CBAA21600908E36 /* LED */ = {
 			isa = PBXGroup;
 			children = (
+				F545A7521CBD330700305473 /* LED.entitlements */,
 				F5EBA7061CBAA21600908E36 /* AppDelegate.swift */,
 				F5EBA7081CBAA21600908E36 /* Assets.xcassets */,
 				F5EBA70A1CBAA21600908E36 /* MainMenu.xib */,
@@ -79,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F545A7441CBD32FE00305473 /* LedLauncherApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F545A74F1CBD32FE00305473 /* Build configuration list for PBXNativeTarget "LedLauncherApplication" */;
+			buildPhases = (
+				F545A7411CBD32FE00305473 /* Sources */,
+				F545A7421CBD32FE00305473 /* Frameworks */,
+				F545A7431CBD32FE00305473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LedLauncherApplication;
+			productName = LedLauncherApplication;
+			productReference = F545A7451CBD32FE00305473 /* LedLauncherApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F5EBA7021CBAA21600908E36 /* LED */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5EBA7101CBAA21600908E36 /* Build configuration list for PBXNativeTarget "LED" */;
@@ -86,6 +153,7 @@
 				F5EBA6FF1CBAA21600908E36 /* Sources */,
 				F5EBA7001CBAA21600908E36 /* Frameworks */,
 				F5EBA7011CBAA21600908E36 /* Resources */,
+				F545A7541CBD33C600305473 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -106,8 +174,23 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jules Kreutzer";
 				TargetAttributes = {
+					F545A7441CBD32FE00305473 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K3QECPQ6Y3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					F5EBA7021CBAA21600908E36 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K3QECPQ6Y3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,11 +208,21 @@
 			projectRoot = "";
 			targets = (
 				F5EBA7021CBAA21600908E36 /* LED */,
+				F545A7441CBD32FE00305473 /* LedLauncherApplication */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F545A7431CBD32FE00305473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F545A74A1CBD32FE00305473 /* Assets.xcassets in Resources */,
+				F545A74D1CBD32FE00305473 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5EBA7011CBAA21600908E36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +236,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F545A7411CBD32FE00305473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F545A7481CBD32FE00305473 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5EBA6FF1CBAA21600908E36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +260,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F545A74B1CBD32FE00305473 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F545A74C1CBD32FE00305473 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		F5EBA70A1CBAA21600908E36 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -170,6 +279,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F545A7501CBD32FE00305473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LedLauncherApplication/LedLauncherApplication.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LedLauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.nujules.LedLauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F545A7511CBD32FE00305473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LedLauncherApplication/LedLauncherApplication.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LedLauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.nujules.LedLauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F5EBA70E1CBAA21600908E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -256,11 +399,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LED/LED.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LED/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.nujules.LED;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -268,17 +415,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LED/LED.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LED/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.nujules.LED;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F545A74F1CBD32FE00305473 /* Build configuration list for PBXNativeTarget "LedLauncherApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F545A7501CBD32FE00305473 /* Debug */,
+				F545A7511CBD32FE00305473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F5EBA6FE1CBAA21600908E36 /* Build configuration list for PBXProject "LED" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
