@@ -148,5 +148,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         
         HttpRequest.brightnessDidChange(colorPreview.backgroundColor!, changeToBrightness: brightness)
     }
+    
+    @IBAction func doDimLights(sender: AnyObject) {
+        HttpRequest.doTurnOffLights()
+    }
+    
 }
 
