@@ -14,6 +14,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let image = UIImage(named: "LaunchImage")
+        let imageView = UIImageView(image: image)
+        self.navigationItem.titleView = imageView
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
 

@@ -46,8 +46,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "LaunchImage")
+        let imageView = UIImageView(image: image)
+        self.navigationItem.titleView = imageView
         serverAddress = defaults.objectForKey("serverAddress") != nil ? defaults.stringForKey("serverAddress")! : ""
-        
     }
 
     
