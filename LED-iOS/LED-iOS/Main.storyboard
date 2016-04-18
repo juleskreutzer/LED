@@ -18,59 +18,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-9v-OgV">
-                                <rect key="frame" x="140" y="79" width="320" height="198"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="llt-3F-iGx">
-                                <rect key="frame" x="138" y="314" width="324" height="31"/>
+                                <rect key="frame" x="38" y="314" width="525" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="doChangeBrightness:" destination="BYZ-38-t0r" eventType="valueChanged" id="cVw-1m-lQ1"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birghtness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOp-5b-mWo">
-                                <rect key="frame" x="140" y="285" width="320" height="21"/>
+                                <rect key="frame" x="40" y="285" width="320" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="6ky-D2-Fkp"/>
+                                    <constraint firstAttribute="width" constant="320" id="9eH-XN-h26"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKR-IJ-SDv">
-                                <rect key="frame" x="0.0" y="392" width="600" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKR-IJ-SDv" customClass="SwiftyButton" customModule="LED_iOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="366" width="521" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="KhR-bI-abY"/>
+                                </constraints>
                                 <state key="normal" title="Change Color">
+                                    <color key="titleColor" red="0.96560045809999995" green="0.96560045809999995" blue="0.96560045809999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonPressDepth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeColorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="da0-Ii-pBA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-T8-X5P">
-                                <rect key="frame" x="0.0" y="430" width="600" height="30"/>
-                                <state key="normal" title="Dim Lights"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-T8-X5P" customClass="SwiftyButton" customModule="LED_iOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="430" width="521" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="W79-j2-2ca"/>
+                                </constraints>
+                                <state key="normal" title="Dim Lights">
+                                    <color key="titleColor" red="0.96560045809999995" green="0.96560045809999995" blue="0.96560045809999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonPressDepth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doDimLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1f-XQ-DSI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-9v-OgV">
+                                <rect key="frame" x="40" y="79" width="521" height="198"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9yX-Pj-95A"/>
-                            <constraint firstItem="ijl-9v-OgV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="G4a-kt-lrr"/>
-                            <constraint firstItem="ijl-9v-OgV" firstAttribute="trailing" secondItem="bOp-5b-mWo" secondAttribute="trailing" id="TRk-JZ-Y40"/>
-                            <constraint firstItem="9I8-T8-X5P" firstAttribute="top" secondItem="TKR-IJ-SDv" secondAttribute="bottom" constant="8" symbolic="YES" id="TT8-rc-oU4"/>
-                            <constraint firstItem="bOp-5b-mWo" firstAttribute="top" secondItem="ijl-9v-OgV" secondAttribute="bottom" constant="8" symbolic="YES" id="V8L-yv-pMe"/>
-                            <constraint firstItem="bOp-5b-mWo" firstAttribute="trailing" secondItem="llt-3F-iGx" secondAttribute="trailing" id="XIS-wi-hiL"/>
-                            <constraint firstItem="llt-3F-iGx" firstAttribute="top" secondItem="bOp-5b-mWo" secondAttribute="bottom" constant="8" symbolic="YES" id="Yh5-HH-Bdf"/>
-                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="top" secondItem="llt-3F-iGx" secondAttribute="bottom" constant="48" id="ffL-H3-7P6"/>
-                            <constraint firstItem="ijl-9v-OgV" firstAttribute="leading" secondItem="bOp-5b-mWo" secondAttribute="leading" id="l11-P9-M9Y"/>
-                            <constraint firstItem="ijl-9v-OgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nbM-TU-Q7Z"/>
-                            <constraint firstItem="llt-3F-iGx" firstAttribute="centerX" secondItem="TKR-IJ-SDv" secondAttribute="centerX" id="pnx-K0-610"/>
-                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="leading" secondItem="9I8-T8-X5P" secondAttribute="leading" id="seo-P5-Aof"/>
-                            <constraint firstItem="bOp-5b-mWo" firstAttribute="leading" secondItem="llt-3F-iGx" secondAttribute="leading" id="tHa-5L-ZNy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TKR-IJ-SDv" secondAttribute="bottom" constant="129" id="uIm-TK-uql"/>
-                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="trailing" secondItem="9I8-T8-X5P" secondAttribute="trailing" id="xuu-Rg-STS"/>
+                            <constraint firstItem="9I8-T8-X5P" firstAttribute="top" secondItem="TKR-IJ-SDv" secondAttribute="bottom" constant="8" symbolic="YES" id="736-us-DTH"/>
+                            <constraint firstItem="bOp-5b-mWo" firstAttribute="leading" secondItem="llt-3F-iGx" secondAttribute="leading" id="7yn-a2-7wd"/>
+                            <constraint firstItem="ijl-9v-OgV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="K6u-mE-mau"/>
+                            <constraint firstItem="ijl-9v-OgV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="KsR-S1-Uhh"/>
+                            <constraint firstItem="ijl-9v-OgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMe-CT-koR"/>
+                            <constraint firstItem="bOp-5b-mWo" firstAttribute="top" secondItem="ijl-9v-OgV" secondAttribute="bottom" constant="8" symbolic="YES" id="UCq-Ja-BGg"/>
+                            <constraint firstItem="llt-3F-iGx" firstAttribute="trailing" secondItem="TKR-IJ-SDv" secondAttribute="trailing" id="Ydd-Kc-ZSy"/>
+                            <constraint firstItem="llt-3F-iGx" firstAttribute="leading" secondItem="TKR-IJ-SDv" secondAttribute="leading" id="Zeu-nz-AZV"/>
+                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="leading" secondItem="9I8-T8-X5P" secondAttribute="leading" id="b4U-Xl-o95"/>
+                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="top" secondItem="llt-3F-iGx" secondAttribute="bottom" constant="22" id="cHL-sM-xAx"/>
+                            <constraint firstItem="TKR-IJ-SDv" firstAttribute="trailing" secondItem="9I8-T8-X5P" secondAttribute="trailing" id="jaq-QO-hZz"/>
+                            <constraint firstItem="ijl-9v-OgV" firstAttribute="trailing" secondItem="llt-3F-iGx" secondAttribute="trailing" id="oLN-jv-na1"/>
+                            <constraint firstItem="ijl-9v-OgV" firstAttribute="leading" secondItem="bOp-5b-mWo" secondAttribute="leading" id="uza-ce-oIQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9I8-T8-X5P" secondAttribute="bottom" constant="65" id="wdI-Ab-lHA"/>
+                            <constraint firstItem="llt-3F-iGx" firstAttribute="top" secondItem="bOp-5b-mWo" secondAttribute="bottom" constant="8" symbolic="YES" id="xhh-s3-Bbx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RSe-6Q-S7s"/>
@@ -144,6 +195,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OfF-6s-Xk6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -234,7 +286,10 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="OZI-Nx-OUV">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="mGc-ey-RSR" kind="relationship" relationship="viewControllers" id="xyf-Ts-yHt"/>
@@ -245,15 +300,16 @@
             </objects>
             <point key="canvasLocation" x="182" y="939"/>
         </scene>
-        <!--Sesstings-->
+        <!--Settings-->
         <scene sceneID="Jf0-XK-P0k">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JVZ-2s-RiY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sesstings" image="Save" id="KNM-yL-bSr"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Save" id="KNM-yL-bSr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PBP-aR-pZ2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

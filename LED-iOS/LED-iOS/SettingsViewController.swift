@@ -20,6 +20,9 @@ class SettingsViewController: UIViewController {
         self.navigationItem.titleView = imageView
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        txtServerAddress.text = defaults.objectForKey("serverAddress") != nil ? defaults.stringForKey("serverAddress")! : ""
 
         // Do any additional setup after loading the view.
     }
@@ -45,6 +48,8 @@ class SettingsViewController: UIViewController {
             
             presentViewController(controller, animated: true, completion: nil)
         } else {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setValue(address, forKey: "serverAddress")
             
         }
         

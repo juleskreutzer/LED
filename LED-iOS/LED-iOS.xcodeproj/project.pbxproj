@@ -16,6 +16,12 @@
 		F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */; };
 		F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58575D11CAAF5380023AF75 /* ViewController.swift */; };
 		F58575D51CAAF5380023AF75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58575D21CAAF5380023AF75 /* Main.storyboard */; };
+		F59330DC1CC414B300FD1485 /* SwiftyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59330D91CC414B300FD1485 /* SwiftyButton.swift */; };
+		F59330DD1CC414B300FD1485 /* SwiftyButton+ResizableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59330DA1CC414B300FD1485 /* SwiftyButton+ResizableImage.swift */; };
+		F59330DE1CC414B300FD1485 /* SwiftyCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59330DB1CC414B300FD1485 /* SwiftyCustomContentButton.swift */; };
+		F59330F61CC415E700FD1485 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F59330EE1CC415E700FD1485 /* ALView+PureLayout.m */; };
+		F59330F71CC415E700FD1485 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F59330F01CC415E700FD1485 /* NSArray+PureLayout.m */; };
+		F59330F81CC415E700FD1485 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F59330F21CC415E700FD1485 /* NSLayoutConstraint+PureLayout.m */; };
 		F59D3A3D1CC10A5500609EEA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59D3A3C1CC10A5500609EEA /* SettingsViewController.swift */; };
 		F5C50ECE1CB40FCD0062536C /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +38,19 @@
 		F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F58575D11CAAF5380023AF75 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F58575D21CAAF5380023AF75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F59330D91CC414B300FD1485 /* SwiftyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyButton.swift; sourceTree = "<group>"; };
+		F59330DA1CC414B300FD1485 /* SwiftyButton+ResizableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyButton+ResizableImage.swift"; sourceTree = "<group>"; };
+		F59330DB1CC414B300FD1485 /* SwiftyCustomContentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCustomContentButton.swift; sourceTree = "<group>"; };
+		F59330EC1CC415E700FD1485 /* LED-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LED-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		F59330ED1CC415E700FD1485 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		F59330EE1CC415E700FD1485 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		F59330EF1CC415E700FD1485 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		F59330F01CC415E700FD1485 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		F59330F11CC415E700FD1485 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		F59330F21CC415E700FD1485 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		F59330F31CC415E700FD1485 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		F59330F41CC415E700FD1485 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		F59330F51CC415E700FD1485 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		F59D3A3C1CC10A5500609EEA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +85,7 @@
 		F5028B701CAAA03A00D1A4BD /* LED-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F59330DF1CC415C100FD1485 /* PureLayout */,
 				F5028B891CAAB13C00D1A4BD /* classes */,
 				F5028B711CAAA03A00D1A4BD /* AppDelegate.swift */,
 				F5028B7A1CAAA03A00D1A4BD /* Assets.xcassets */,
@@ -82,12 +102,32 @@
 				F58575CC1CAAF0CD0023AF75 /* Colors.plist */,
 				F58575D01CAAF5380023AF75 /* ColorPickerViewController.swift */,
 				F58575D11CAAF5380023AF75 /* ViewController.swift */,
+				F59330D91CC414B300FD1485 /* SwiftyButton.swift */,
+				F59330DA1CC414B300FD1485 /* SwiftyButton+ResizableImage.swift */,
+				F59330DB1CC414B300FD1485 /* SwiftyCustomContentButton.swift */,
 				F58575D21CAAF5380023AF75 /* Main.storyboard */,
 				F5C50ECD1CB40FCD0062536C /* HttpRequest.swift */,
 				F53890FE1CB4E821005065B2 /* LedError.swift */,
 				F5271C511CBD3F9D00C8B484 /* UIColorExtension.swift */,
 			);
 			name = classes;
+			sourceTree = "<group>";
+		};
+		F59330DF1CC415C100FD1485 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F59330ED1CC415E700FD1485 /* ALView+PureLayout.h */,
+				F59330EE1CC415E700FD1485 /* ALView+PureLayout.m */,
+				F59330EF1CC415E700FD1485 /* NSArray+PureLayout.h */,
+				F59330F01CC415E700FD1485 /* NSArray+PureLayout.m */,
+				F59330F11CC415E700FD1485 /* NSLayoutConstraint+PureLayout.h */,
+				F59330F21CC415E700FD1485 /* NSLayoutConstraint+PureLayout.m */,
+				F59330F31CC415E700FD1485 /* PureLayout.h */,
+				F59330F41CC415E700FD1485 /* PureLayout+Internal.h */,
+				F59330F51CC415E700FD1485 /* PureLayoutDefines.h */,
+				F59330EC1CC415E700FD1485 /* LED-iOS-Bridging-Header.h */,
+			);
+			name = PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,11 +205,17 @@
 			files = (
 				F58575D41CAAF5380023AF75 /* ViewController.swift in Sources */,
 				F53890FF1CB4E821005065B2 /* LedError.swift in Sources */,
+				F59330F81CC415E700FD1485 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				F59D3A3D1CC10A5500609EEA /* SettingsViewController.swift in Sources */,
 				F5C50ECE1CB40FCD0062536C /* HttpRequest.swift in Sources */,
+				F59330F71CC415E700FD1485 /* NSArray+PureLayout.m in Sources */,
+				F59330DE1CC414B300FD1485 /* SwiftyCustomContentButton.swift in Sources */,
 				F58575D31CAAF5380023AF75 /* ColorPickerViewController.swift in Sources */,
 				F5028B721CAAA03A00D1A4BD /* AppDelegate.swift in Sources */,
 				F5271C521CBD3F9D00C8B484 /* UIColorExtension.swift in Sources */,
+				F59330DC1CC414B300FD1485 /* SwiftyButton.swift in Sources */,
+				F59330DD1CC414B300FD1485 /* SwiftyButton+ResizableImage.swift in Sources */,
+				F59330F61CC415E700FD1485 /* ALView+PureLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +322,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "LED-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.nujules.LED-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LED-iOS/LED-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -288,11 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "LED-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.nujules.LED-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LED-iOS/LED-iOS-Bridging-Header.h";
 			};
 			name = Release;
 		};

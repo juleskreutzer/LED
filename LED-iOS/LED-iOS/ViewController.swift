@@ -19,10 +19,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     
     
     // outlet - change color button
-    @IBOutlet var changeColorButton: UIButton!
+    @IBOutlet var changeColorButton: SwiftyButton!
     
     // action - called when change color button clicked
-    @IBAction func changeColorButtonClicked(sender: UIButton) {
+    @IBAction func changeColorButtonClicked(sender: SwiftyButton) {
         if serverAddress != "" {
             self.showColorPicker()
         }
@@ -49,6 +49,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         let image = UIImage(named: "LaunchImage")
         let imageView = UIImageView(image: image)
         self.navigationItem.titleView = imageView
+        
+        changeColorButton.shadowHeight = 5
+        changeColorButton.cornerRadius = 5
+        
         serverAddress = defaults.objectForKey("serverAddress") != nil ? defaults.stringForKey("serverAddress")! : ""
     }
 
